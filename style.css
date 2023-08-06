@@ -1,0 +1,764 @@
+/* Reset default margins and paddings */
+body, h1, h2 {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
+}
+
+/* Style the header */
+header {
+  background-color: black;
+  color: white;
+  padding: 1rem 0;
+  display: flex; /* Set header as a flex container */
+  justify-content: space-between; /* Align items in the header at the ends */
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  align-items: center; /* Align items vertically in the flex container */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  
+}
+
+.title > h1{
+  display:flex;
+  padding:2rem;
+  justify-content: center;
+}
+.title > img {
+  width: 10vh;
+  height: 10vh;
+  margin-right: 10px; /* Add some spacing between the image and the title */
+  animation: moveForwardAndBack 20s linear infinite; /* Animation to move forward and back */
+}
+  
+/*Hamburger Menu*/
+.hamburger {
+  display: none; /* Hide the hamburger icon by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+/*Moving Car*/
+@keyframes moveForwardAndBack {
+  /* Return to the original position after 5 seconds */
+  0% {
+    transform: translateX(0); /* Start position, no movement */
+  }
+  50% {
+    transform: translateX(500px); /* Move 50 pixels to the right */
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+
+#imgfade{
+
+  display:flex;
+  justify-content: center;
+  padding: 10px;
+  width: 30vh;
+  height: 20vh;
+   /* Add some spacing between the button and the image */
+  opacity: 0;
+ 
+ 
+}
+
+
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.button-container{
+  margin-bottom:40px;
+}
+.auto-fade-out {
+  opacity: 0;
+  transition:  opacity 5s ease; /* Updated transition duration to 2 seconds */
+}
+#imginfo
+{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5vh;
+  display:flex;
+  justify-content:center;
+  margin-top:50px;  
+  
+  
+}
+#imgscale {
+  padding: 10px;
+  width: 40vh;
+  height: 20vh;
+}
+
+#textinfo{
+  display:flex;
+  justify-content:end;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-right:20px;
+  
+}
+
+
+.slider-container {
+  width: 80%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slide p {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+#prevBtn,
+#nextBtn {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.slide-fade {
+  display: flex;
+  justify-content: space-between;
+}
+#animateBtn {
+  
+  height: 2vh; /* Adjust the height value as per your preference */
+  /* Add other styling properties if needed */
+
+}
+.imagecontainer {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.text-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-top: 30px;
+  text-align: center;
+}
+.imagecontainer img {
+  
+  width:30vh;
+  height:15vh;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+#animateBtn
+{
+  display: flex;
+  justify-content:end;
+  align-items: center;
+  
+}
+nav {
+  color: white;
+  margin-right:5rem;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 5px;
+}
+
+nav li a {
+  padding: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: red;
+  text-decoration: underline;
+  opacity: 0.75;
+}
+
+
+
+/* Style the main content */
+main {
+    padding:50px;
+}
+section{
+ margin-bottom:10px;
+}
+
+section p {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 2.5vh;
+}
+section h2{
+  display:flex;
+  justify-content:flex-start;
+  margin-right:5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 4vh;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+}
+section h3{
+  display:flex;
+  justify-content:flex-start;
+  margin-right:5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:3vh;
+}
+
+.fadebtn {
+  display: flex;
+  align-items: center;
+}
+
+.img-container {
+  
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.fadebtn p{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fade-left-img {
+  
+  width:30vh;
+  height:15vh;
+  margin:40px;
+  opacity: 0;
+  transform:translateX(250px);
+  transition: opacity 0.5s ease , transform 0.5s ease; /* Transition for fade effect */
+}
+/* CSS class for fade-left transition */
+.fade-left-transition {
+  transform:translateY(0);
+  opacity: 1;
+}
+.fadebtnr{
+  display:flex;
+  align-items:center;
+  
+
+}
+.imgcontainer{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.fadebtnr p{
+  display:flex;
+  justify-content: flex-start;
+  align-items:center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left:50px;
+}
+.fade-right-img
+{
+  width:40vh;
+  height:20vh;
+  margin:40px;
+  opacity:0;
+  transform:translateX(-250px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-right-transition{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.row-fade {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.oddrow,.evenrow{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.textoddrow{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  opacity:0;
+}
+.textevenrow{
+  display:flex;
+  justify-content: flex-start;
+  align-items:center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  opacity:0;
+}
+.textoddrow{
+  transform:translateX(400px);
+}
+.textevenrow{
+  transform:translateX(-400px);
+}
+
+.slide-fade-left, .slide-fade-right {
+  width: 40vh;
+  height: 20vh;
+  margin: 20px;
+  opacity: 0;
+}
+
+.slide-fade-left {
+  transform: translateX(-50px);
+}
+
+.slide-fade-right {
+  transform: translateX(50px);
+}
+
+/* CSS class for slide-fade-left transition */
+.slide-fade-left-transition {
+  transform: translateX(0);
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* CSS class for slide-fade-right transition */
+.slide-fade-right-transition {
+  transform: translateX(0);
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.textoddrow-transition{
+  transform:translateX(0);
+  opacity:1;
+  transition:opacity 0.5s ease, transform 0.5s ease;
+}
+.textevenrow-transition{
+  transform:translateX(0);
+  opacity:1;
+  transition:opacity 0.5s ease, transform 0.5s ease;
+}
+
+.brand-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.textcontainer {
+  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.textcontainer ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+
+}
+
+/* .textcontainer ul li{
+  font-size: 3vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin:10px;
+ 
+} */
+
+.brand-info {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2vh;
+  margin-bottom:10px;
+}
+
+.company-info {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.5vh;
+  margin-top:10px;
+}
+
+.brandimg img {
+ width:40vh;
+ height:25vh;
+  margin-right: 20px;
+}
+
+
+
+/* CSS class for slide-fade-down transition */
+.slide-fade-down-transition {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* CSS for the reveal button */
+#revealBtn {
+  margin-bottom: 20px;
+}
+
+.quizapp{
+  background:black ;
+  width:90%;
+  max-width: 50%;
+  margin:100px auto 0;
+  border-radius: 10px;
+  padding:30px;
+
+}
+.quiz{
+  padding:20px 0;
+}
+.quiz h2 {
+  font-size:2.5vh;
+  color:white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn{
+  background:white;
+  color:black;
+  font-size:2vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width:100%;
+  border: 1px solid black;
+  padding:10px;
+  margin:10px 0;
+  text-align: left;
+  border-radius:4px;
+  cursor:pointer;
+  transition: all 0.3s;
+}
+.btn:hover:not([disabled])
+{
+  background:black;
+  color:white;
+}
+.btn:disabled{
+  cursor:no-drop; 
+}
+#next-btn
+{
+  background:white;
+  color:black;
+  width:25%;
+  border: 0;
+  padding: 10px;
+  margin:20px auto 0;
+  border-radius: 4px;
+  cursor:pointer;
+  display:none;
+}
+
+.correct {
+  background: green;
+
+}
+.incorrect{
+  background: red;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:2vh;
+}
+.footer-content a:hover
+{
+  text-decoration:solid 5px;
+  color:red;
+  font-size: larger;
+
+}
+
+.footer-content img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+
+/* Media Query for <= 800px */
+@media screen and (max-width: 800px) {
+  .nav-links {
+      display: none; /* Hide the horizontal navigation on smaller screens */
+  }
+
+  .hamburger {
+      display: flex; /* Display the hamburger icon */
+  }
+
+  /* Show the vertical navigation when the hamburger icon is active */
+  .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 70px; /* Adjust this value as needed to position the menu below the header */
+      right: 10px;
+      background-color: #333;
+      padding: 10px;
+  }
+
+  .nav-links.active li {
+      margin: 10px 0;
+  }
+
+   /* Vertically align the Ford Model T images */
+   .button-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container img {
+    margin: 10px 0;
+}
+
+/* Slider styles */
+.slider-container {
+  width: 100%; /* Full width for smaller screens */
+}
+
+.slide {
+  min-width: 100%; /* Each slide takes full width of the slider container */
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth sliding transition */
+}
+
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Vertically align each image and text in the slide-fade container */
+.slide-fade {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.imagecontainer {
+  width: 100%;
+  text-align: center;
+}
+
+.imagecontainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  margin-top: 10px;
+}
+
+
+#General > div {
+  margin: 10px;
+}
+
+.fade-left-img{
+  width: 70%; /* Adjust the image width for responsive layout */
+  height: auto; /* Let the height scale accordingly */
+  margin: 20px auto; /* Center the images */
+  transform: translateX(0); /* Reset the translation for vertical alignment */
+}
+
+.img-container {
+  
+  flex-direction: column;
+  align-items: center; /* Vertically align the images and text */
+}
+
+.fadebtn p{
+  text-align: center; /* Center the text */
+  margin: 10px 0;
+
+
+}
+#NImpact > div {
+  margin: 10px;
+}
+.fade-right-img {
+  width: 70%; /* Adjust the image width for responsive layout */
+  height: auto; /* Let the height scale accordingly */
+  margin: 20px auto; /* Center the images */
+  transform: translateX(0); /* Reset the translation for vertical alignment */
+}
+
+.imgcontainer {
+  flex-direction: column;
+  align-items: center; /* Vertically align the images and text */
+}
+
+.fadebtnr p {
+  text-align: center; /* Center the text */
+  margin: 10px 0;
+}
+
+    /* Vertically align each image and text in the slide-fade container */
+    .slide-fade {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .slide-fade img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .slide-fade .text-container {
+      margin-top: 10px;
+  }
+
+   /* Vertically align the text in the slide-fade container */
+   .row-fade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Vertically align each image and text in the oddrow and evenrow containers */
+  .oddrow, .evenrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .oddrow img, .evenrow img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .oddrow .textoddrow, .evenrow .textevenrow {
+    margin-top: 10px;
+  }
+
+ /* Vertically align the content in the brand-container */
+ .brand-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top of the container */
+}
+
+.brand-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items horizontally */
+}
+
+/* Additional styles for the brand-card content */
+.brand-card .brandimg,
+.brand-card .textcontainer {
+  text-align: center;
+}
+
+}
+  
